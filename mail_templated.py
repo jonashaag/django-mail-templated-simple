@@ -8,7 +8,7 @@ def send_mail(template_name, context, from_email, recipient_list, fail_silently=
     template = get_template(template_name)
 
     subject = body = html = None
-    for block in template.nodelist:
+    for block in template.template.nodelist:
         if isinstance(block, BlockNode):
             if block.name == 'subject':
                 subject = block
@@ -18,6 +18,7 @@ def send_mail(template_name, context, from_email, recipient_list, fail_silently=
                 html = block
 
     context = Context(context)
+    context.template = template.template
 
     subject = subject.render(context).strip('\r\n')
     body = body.render(context).strip('\r\n')
