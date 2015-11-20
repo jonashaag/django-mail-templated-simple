@@ -14,7 +14,7 @@ setup(
     include_package_data = True,
 
     classifiers = ['Development Status :: 5 - Production/Stable',
-                   'License :: OSI Approved :: ISC License',
+                   'License :: OSI Approved :: ISC License (ISCL)',
                    'Framework :: Django',
                    'Programming Language :: Python',
                    'Programming Language :: Python :: 2',
