@@ -2,7 +2,7 @@ django-mail-templated-simple
 ============================
 
 I did this reimplementation of [django-mail-templated](https://github.com/artemrizhov/django-mail-templated) because it was causing problems with
-[django-celery-email](https://github.com/pmclanahan/django-celery-email).
+[django-celery-email](https://github.com/pmclanahan/django-celery-email) (see [#7](https://github.com/artemrizhov/django-mail-templated/issues/7), [#8](https://github.com/artemrizhov/django-mail-templated/issues/8)).
 
 In this version, `mail_templated.send_mail` is simply a wrapper around Django's `send_mail`.
 
