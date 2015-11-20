@@ -38,5 +38,7 @@ matrix:
       env: DJANGO=django16
     - python: "3.5"
       env: DJANGO=django17
+install:
+  - "pip install tox"
 script:
   - tox -e $TRAVIS_PYTHON_VERSION-$DJANGO
