@@ -1,13 +1,6 @@
-|travis| |codecov|
+[![Build Status](https://travis-ci.org/jonashaag/django-mail-templated-simple.svg?branch=master)](https://travis-ci.org/jonashaag/django-mail-templated-simple) [![codecov.io](https://codecov.io/github/jonashaag/django-mail-templated-simple/coverage.svg?branch=master)](https://codecov.io/github/jonashaag/django-mail-templated-simple?branch=master)
 
-.. |travis| image:: https://travis-ci.org/jonashaag/django-mail-templated-simple.svg?branch=master
-    :target: https://travis-ci.org/jonashaag/django-mail-templated-simple
-
-.. |codecov| image:: https://codecov.io/github/jonashaag/django-mail-templated-simple/coverage.svg?branch=master
-    :target: https://codecov.io/github/jonashaag/django-mail-templated-simple?branch=master
-
-django-mail-templated-simple
-============================
+# django-mail-templated-simple
 
 I did this reimplementation of [django-mail-templated](https://github.com/artemrizhov/django-mail-templated) because it was causing problems with
 [django-celery-email](https://github.com/pmclanahan/django-celery-email) (see [#7](https://github.com/artemrizhov/django-mail-templated/issues/7), [#8](https://github.com/artemrizhov/django-mail-templated/issues/8)).
