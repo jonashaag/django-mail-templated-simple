@@ -1,4 +1,10 @@
-[![Build Status](https://travis-ci.org/jonashaag/django-mail-templated-simple.svg?branch=master)](https://travis-ci.org/jonashaag/django-mail-templated-simple)
+|travis| |codecov|
+
+.. |travis| image:: https://travis-ci.org/jonashaag/django-mail-templated-simple.svg?branch=master
+    :target: https://travis-ci.org/jonashaag/django-mail-templated-simple
+
+.. |codecov| image:: https://codecov.io/github/jonashaag/django-mail-templated-simple/coverage.svg?branch=master
+    :target: https://codecov.io/github/jonashaag/django-mail-templated-simple?branch=master
 
 django-mail-templated-simple
 ============================

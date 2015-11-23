@@ -38,7 +38,12 @@ matrix:
       env: DJANGO=django16
     - python: "3.5"
       env: DJANGO=django17
+
+before_install:
+  - pip install codecov
 install:
-  - "pip install tox"
+  - pip install tox
 script:
-  - tox -e py${TRAVIS_PYTHON_VERSION//[.]/}-$DJANGO
+  - TOX_TEST_PASSENV="TRAVIS TRAVIS_JOB_ID TRAVIS_BRANCH" tox -e py${TRAVIS_PYTHON_VERSION//[.]/}-$DJANGO
+after_success:
+  - codecov
