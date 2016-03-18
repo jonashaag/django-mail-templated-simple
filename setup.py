@@ -5,7 +5,7 @@ setup(
     author       = "Jonas Haag",
     author_email = "jonas@lophus.org",
     license      = "ISC",
-    url          = "https://github.com/jonashaag/mail_templated_simple",
+    url          = "https://github.com/jonashaag/django-mail-templated-simple",
     description  = 'A simple reimplementation of "django-mail-templated"',
     version      = "1.0",
 
