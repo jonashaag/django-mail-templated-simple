@@ -1,10 +1,10 @@
 sudo: false
 language: python
 python:
-  - "2.6"
   - "2.7"
   - "3.4"
   - "3.5"
+  - "3.6"
 env:
   - DJANGO=django14
   - DJANGO=django15
@@ -12,15 +12,10 @@ env:
   - DJANGO=django17
   - DJANGO=django18
   - DJANGO=django19
+  - DJANGO=django110
+  - DJANGO=django111
 matrix:
   exclude:
-    - python: "2.6"
-      env: DJANGO=django17
-    - python: "2.6"
-      env: DJANGO=django18
-    - python: "2.6"
-      env: DJANGO=django19
-
     - python: "3.4"
       env: DJANGO=django14
     - python: "3.4"

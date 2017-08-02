@@ -7,4 +7,4 @@ I did this reimplementation of [django-mail-templated](https://github.com/artemr
 
 In this version, `mail_templated.send_mail` is simply a wrapper around Django's `send_mail`.
 
-Python >= 2.6 and Django >= 1.4 are tested, but other versions may also work. Patches welcome (if required).
+Python >= 2.7 and Django >= 1.4 are tested, but other versions may also work. Patches welcome (if required).
