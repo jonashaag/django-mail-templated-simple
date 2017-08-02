@@ -31,6 +31,16 @@ class Tests(TestCase):
         self.assertEqual(mail.outbox[0].alternatives, [])
         self.assertEqual(mail.outbox[0].body, "Only plaintext body")
 
+    def test_without_body(self):
+        mail_templated_simple.send_mail(
+            "mail_templated_simple_tests/html_only_example.tpl",
+            None, None, ["to@example.com"],
+        )
+        self.assertEqual(len(mail.outbox), 1)
+        self.assertEqual(mail.outbox[0].alternatives, [])
+        self.assertEqual(mail.outbox[0].content_subtype, 'html')
+        self.assertEqual(mail.outbox[0].body, "Only HTML body")
+
     def test_email_message(self):
         msg = mail_templated_simple.email_message(
             "mail_templated_simple_tests/plaintext_only_example.tpl",

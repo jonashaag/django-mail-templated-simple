@@ -39,13 +39,22 @@ def email_message(template_name, context, *message_args, **message_kwargs):
         context.template = template.template
 
     subject = subject.render(context).strip('\r\n')
-    body = body.render(context).strip('\r\n')
+    assert subject is not None, "'subject' block is mandatory (but may be empty)"
+    assert body is not None or html is not None, "One of 'html' or 'body' is mandatory (but may be empty)"
+
+    if body:
+        body = body.render(context).strip('\r\n')
     if html:
         html = html.render(context).strip('\r\n')
 
-    mail = EmailMultiAlternatives(subject, body, *message_args, **message_kwargs)
-    if html:
+    if body and html:
+        mail = EmailMultiAlternatives(subject, body, *message_args, **message_kwargs)
         mail.attach_alternative(html, 'text/html')
+    elif body:
+        mail = EmailMultiAlternatives(subject, body, *message_args, **message_kwargs)
+    else:
+        mail = EmailMultiAlternatives(subject, html, *message_args, **message_kwargs)
+        mail.content_subtype = 'html'
     return mail
 
 
