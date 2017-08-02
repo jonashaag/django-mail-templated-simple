@@ -32,6 +32,15 @@ matrix:
     - python: "3.5"
       env: DJANGO=django17
 
+    - python: "3.6"
+      env: DJANGO=django14
+    - python: "3.6"
+      env: DJANGO=django15
+    - python: "3.6"
+      env: DJANGO=django16
+    - python: "3.6"
+      env: DJANGO=django17
+
 before_install:
   - pip install codecov
 install:
