@@ -51,7 +51,7 @@ def email_message(template_name, context, *message_args, **message_kwargs):
 
 def send_mail(template_name, context, from_email, recipient_list,
               fail_silently=False, auth_user=None, auth_password=None,
-              connection=None, html_message=None):
+              connection=None):
     """This is what :func:`django.core.mail.send_mail` is for normal messages.
 
     Note that instead of the `subject` and `message` parameters this convience
