@@ -39,6 +39,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
 
     'mail_templated_simple_tests',
+    'mail_templated_simple',
 )
 
 MIDDLEWARE_CLASSES = (

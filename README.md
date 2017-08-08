@@ -11,3 +11,25 @@ Compatible with:
 
 - Python 2.7, 3.4, 3.5, 3.6
 - Django 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11
+
+## Usage
+
+**Note:** Breaking change in version 3. You must now have your templates extend a base template, as follows:
+
+```django
+{% extends "mail_templated_simple/base.tpl" %}
+
+{% block subject %}Example subject, {{ foo }}{% endblock %}
+
+{% block body %}
+Example plaintext, {{ foo }}
+{% endblock %}
+
+{% block html %}
+<p>
+  Example html, {{ bar }}
+</p>
+{% endblock %}
+```
+
+At least one of plaintext ``body`` and ``html`` is mandatory. ``subject`` is always mandatory.
