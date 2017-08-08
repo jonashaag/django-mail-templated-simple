@@ -38,7 +38,7 @@ def _find_block(template, tag):
     end_tag = '###___end%s___###' % tag
     start_tag_idx = template.find(start_tag)
     end_tag_idx = template.find(end_tag)
-    assert start_tag_idx != -1 and end_tag_idx != -1, 'Could not find %s tag. Did you include {% extends "mail_templated_simple/base.tpl" %} in your template?'
+    assert start_tag_idx != -1 and end_tag_idx != -1, 'Could not find %r tag. Did you include {% extends "mail_templated_simple/base.tpl" %} in your template?' % tag
     return template[start_tag_idx+len(start_tag):end_tag_idx]
 
 
