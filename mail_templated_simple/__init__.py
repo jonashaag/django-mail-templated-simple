@@ -23,6 +23,7 @@ def email_message(template_name, context, *message_args, **message_kwargs):
     assert body is not None or html is not None, "One of 'html' or 'body' is mandatory (but may be empty)"
 
     subject = subject.strip()
+    body = body.strip()
 
     if body and html:
         mail = EmailMultiAlternatives(subject, body, *message_args, **message_kwargs)
