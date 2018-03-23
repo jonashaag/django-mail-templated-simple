@@ -7,7 +7,7 @@ setup(
     license      = "ISC",
     url          = "https://github.com/jonashaag/django-mail-templated-simple",
     description  = 'A simple reimplementation of "django-mail-templated"',
-    version      = "3.0",
+    version      = "3.1",
 
     packages = ['mail_templated_simple'],
     zip_safe = False,
