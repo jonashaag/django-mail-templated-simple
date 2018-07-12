@@ -5,6 +5,7 @@ python:
   - "3.4"
   - "3.5"
   - "3.6"
+  - "3.7"
 env:
   - DJANGO=django14
   - DJANGO=django15
@@ -14,8 +15,12 @@ env:
   - DJANGO=django19
   - DJANGO=django110
   - DJANGO=django111
+  - DJANGO=django20
 matrix:
   exclude:
+    - python: "2.7"
+      env: DJANGO=django20
+
     - python: "3.4"
       env: DJANGO=django14
     - python: "3.4"
@@ -40,6 +45,23 @@ matrix:
       env: DJANGO=django16
     - python: "3.6"
       env: DJANGO=django17
+
+    - python: "3.7"
+      env: DJANGO=django14
+    - python: "3.7"
+      env: DJANGO=django15
+    - python: "3.7"
+      env: DJANGO=django16
+    - python: "3.7"
+      env: DJANGO=django17
+    - python: "3.7"
+      env: DJANGO=django18
+    - python: "3.7"
+      env: DJANGO=django19
+    - python: "3.7"
+      env: DJANGO=django110
+    - python: "3.7"
+      env: DJANGO=django111
 
 before_install:
   - pip install codecov
