@@ -33,6 +33,10 @@ jobs:
       env: DJANGO=django15
     - python: "3.4"
       env: DJANGO=django16
+    - python: "3.4"
+      env: DJANGO=django21
+    - python: "3.4"
+      env: DJANGO=django22
 
     - python: "3.5"
       env: DJANGO=django14
